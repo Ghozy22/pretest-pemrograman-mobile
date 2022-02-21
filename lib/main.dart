@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top: 100,left: 20, right: 20),
         child: Column(
           children: [
             Text('Hasil : $hasil', style: TextStyle(fontSize: 20),),
@@ -140,38 +140,55 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top :10),
+              padding: const EdgeInsets.only(top :20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ElevatedButton(onPressed: (){
-                    tambah();
-                    textFieldController1.clear();
-                    textFieldController2.clear();
-                  }, child: Text("Tambah")),
-                  ElevatedButton(onPressed: (){
-                    kali();
-                    textFieldController1.clear();
-                    textFieldController2.clear();
-                  }, child: Text("Kali")),
+                  SizedBox(
+                    width: 100,
+                    height: 35,
+                    child: ElevatedButton(onPressed: (){
+                      tambah();
+                      textFieldController1.clear();
+                      textFieldController2.clear();
+                    }, child: Text("+")),
+                  ),
+                  SizedBox(
+                    width: 100,
+                    height: 35,
+                    child: ElevatedButton(onPressed: (){
+                      kali();
+                      textFieldController1.clear();
+                      textFieldController2.clear();
+                    }, child: Text("X"),),
+                  ),
                 ],
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.only(top :10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ElevatedButton(onPressed: (){
-                    kurang();
-                    textFieldController1.clear();
-                    textFieldController2.clear();
-                  }, child: Text("Kurang")),
-                  ElevatedButton(onPressed: (){
-                    bagi();
-                    textFieldController1.clear();
-                    textFieldController2.clear();
-                  }, child: Text("Bagi")),
+                  SizedBox(
+                    width: 100,
+                    height: 35,
+                    child: ElevatedButton(onPressed: (){
+                      kurang();
+                      textFieldController1.clear();
+                      textFieldController2.clear();
+                    }, child: Text("-")),
+                  ),
+                  SizedBox(
+                    width: 100,
+                    height: 35,
+                    child: ElevatedButton(onPressed: (){
+                      bagi();
+                      textFieldController1.clear();
+                      textFieldController2.clear();
+                    }, child: Text("/")),
+                  ),
                 ],
               ),
             ),
